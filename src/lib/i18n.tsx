@@ -29,7 +29,7 @@ export const translations = {
     },
     hero: {
       eyebrow: "NEUE KOLLEKTION 2026",
-      titleLines: ["Wo Licht", "zu Vermächtnis", "wird"],
+      titleLines: ["Wo Licht", "zum Vermächtnis wird"],
       description:
         "Jedes Schmuckstück unserer Kollektion fängt die Brillanz ethisch bezogener Diamanten ein, gefasst in zeitlosen Designs für Generationen.",
       primaryCta: "Kollektion ansehen",
@@ -182,7 +182,7 @@ export const translations = {
     },
     hero: {
       eyebrow: "NEW COLLECTION 2026",
-      titleLines: ["Where Light", "Becomes", "Legacy"],
+      titleLines: ["Where Light", "Becomes Legacy"],
       description:
         "Each piece in our collection captures the brilliance of ethically sourced diamonds, set in timeless designs that transcend generations.",
       primaryCta: "View Collection",
