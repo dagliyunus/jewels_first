@@ -16,21 +16,23 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative scroll-mt-24 overflow-hidden pt-[72px]">
+    <section id="home" className="relative scroll-mt-24 overflow-hidden pt-[80px] sm:pt-[72px]">
       <div className="min-h-[calc(100dvh-72px)] flex flex-col lg:flex-row">
         {/* Left — Image */}
-        <div className="relative w-full lg:w-[54%] h-[44dvh] sm:h-[52dvh] lg:h-auto lg:min-h-[calc(100dvh-72px)] overflow-hidden">
+        <div className="relative w-full lg:w-[54%] px-4 pt-2 sm:px-0 sm:pt-0">
+          <div className="relative h-[39dvh] sm:h-[52dvh] lg:h-auto lg:min-h-[calc(100dvh-72px)] overflow-hidden rounded-2xl sm:rounded-none bg-[hsl(30,18%,4%)]">
           <motion.img
             src={heroImg}
             alt={t.productSpotlight.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain sm:object-cover object-center"
             initial={{ scale: 1.08 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2.5, ease: "easeOut" }}
             width={1080}
             height={1920}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 lg:hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 lg:hidden" />
+          </div>
         </div>
 
         {/* Right — Text */}
