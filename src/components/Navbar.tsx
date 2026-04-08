@@ -35,25 +35,25 @@ const Navbar = () => {
   ];
 
   const headerClassName = scrolled
-    ? "bg-background/90 backdrop-blur-md border-b border-divider shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]"
+    ? "bg-background/82 backdrop-blur-2xl border-b border-divider/80 shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]"
     : dark
-      ? "bg-gradient-to-b from-background/30 via-background/10 to-transparent"
-      : "bg-background/76 backdrop-blur-md border-b border-divider/60 shadow-[0_10px_30px_hsl(var(--foreground)/0.06)]";
+      ? "bg-background/45 backdrop-blur-2xl border-b border-divider/40 shadow-[0_10px_30px_hsl(var(--foreground)/0.16)]"
+      : "bg-background/72 backdrop-blur-2xl border-b border-divider/70 shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]";
 
   const navTextClassName = dark && !scrolled
     ? "text-foreground/88"
     : !dark && !scrolled
-      ? "text-primary drop-shadow-[0_1px_12px_hsl(var(--background)/0.45)]"
+      ? "text-foreground drop-shadow-[0_1px_12px_hsl(var(--background)/0.4)]"
       : "text-foreground";
   const navLinkClassName = dark && !scrolled
-    ? "text-foreground/78 hover:text-foreground"
+    ? "text-foreground/86 hover:text-foreground"
     : !dark && !scrolled
-      ? "text-primary/95 hover:text-primary drop-shadow-[0_1px_10px_hsl(var(--background)/0.45)]"
+      ? "text-foreground/88 hover:text-foreground drop-shadow-[0_1px_10px_hsl(var(--background)/0.35)]"
       : "text-foreground/85 hover:text-foreground";
   const iconClassName = dark && !scrolled
-    ? "text-foreground/78 hover:text-primary"
+    ? "text-foreground/82 hover:text-primary"
     : !dark && !scrolled
-      ? "text-primary/90 hover:text-primary drop-shadow-[0_1px_10px_hsl(var(--background)/0.45)]"
+      ? "text-foreground/86 hover:text-primary drop-shadow-[0_1px_10px_hsl(var(--background)/0.35)]"
       : "text-foreground/80 hover:text-primary";
 
   const languageSwitcher = (

@@ -19,25 +19,25 @@ const Hero = () => {
     <section id="home" className="relative scroll-mt-24 overflow-hidden pt-[80px] sm:pt-[72px]">
       <div className="flex flex-col lg:grid lg:grid-cols-[54fr_46fr] lg:min-h-[calc(100dvh-72px)]">
         {/* Left — Image */}
-        <div className="relative w-full px-4 pt-2 sm:px-0 sm:pt-0">
-          <div className="relative h-[39dvh] sm:h-[52dvh] lg:h-[calc(100dvh-72px)] overflow-hidden rounded-2xl sm:rounded-none bg-[hsl(30,18%,4%)]">
+        <div className="relative w-full px-0 pt-0 sm:px-0 sm:pt-0">
+          <div className="relative overflow-hidden bg-[hsl(30,18%,4%)] sm:h-[52dvh] lg:h-[calc(100dvh-72px)] sm:rounded-none">
             <motion.img
               src={heroImg}
               alt={t.productSpotlight.title}
-              className="w-full h-full object-contain sm:object-cover object-center"
+              className="block w-full h-auto object-contain object-center sm:h-full sm:object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}
               transition={{ duration: 2.5, ease: "easeOut" }}
               width={1080}
               height={1920}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 sm:hidden" />
           </div>
         </div>
 
         {/* Right — Text */}
-        <div className="w-full flex items-start px-6 sm:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 lg:py-0 bg-background">
-          <div className="w-full max-w-[38rem] mx-auto lg:mx-0 lg:pt-14 xl:pt-20">
+        <div className="w-full flex items-center px-6 sm:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 lg:py-0 bg-background">
+          <div className="w-full max-w-[40rem] mx-auto">
             <motion.p
               custom={0}
               variants={fadeUp}
@@ -53,8 +53,8 @@ const Hero = () => {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-display italic font-light text-foreground leading-[0.98] tracking-[-0.02em] mb-6"
-              style={{ fontSize: "clamp(2.45rem, 1.3rem + 3.1vw, 5.25rem)" }}
+              className="font-display italic font-light text-foreground leading-[0.94] tracking-[-0.025em] mb-6"
+              style={{ fontSize: "clamp(2.3rem, 1.15rem + 2.7vw, 4.7rem)" }}
             >
               {t.hero.titleLines.map((line, index) => (
                 <span key={line}>
