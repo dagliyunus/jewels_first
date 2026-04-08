@@ -17,27 +17,27 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative scroll-mt-24 overflow-hidden pt-[80px] sm:pt-[72px]">
-      <div className="min-h-[calc(100dvh-72px)] flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:grid lg:grid-cols-[54fr_46fr] lg:min-h-[calc(100dvh-72px)]">
         {/* Left — Image */}
-        <div className="relative w-full lg:w-[54%] px-4 pt-2 sm:px-0 sm:pt-0">
-          <div className="relative h-[39dvh] sm:h-[52dvh] lg:h-auto lg:min-h-[calc(100dvh-72px)] overflow-hidden rounded-2xl sm:rounded-none bg-[hsl(30,18%,4%)]">
-          <motion.img
-            src={heroImg}
-            alt={t.productSpotlight.title}
-            className="w-full h-full object-contain sm:object-cover object-center"
-            initial={{ scale: 1.08 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2.5, ease: "easeOut" }}
-            width={1080}
-            height={1920}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 lg:hidden" />
+        <div className="relative w-full px-4 pt-2 sm:px-0 sm:pt-0">
+          <div className="relative h-[39dvh] sm:h-[52dvh] lg:h-[calc(100dvh-72px)] overflow-hidden rounded-2xl sm:rounded-none bg-[hsl(30,18%,4%)]">
+            <motion.img
+              src={heroImg}
+              alt={t.productSpotlight.title}
+              className="w-full h-full object-contain sm:object-cover object-center"
+              initial={{ scale: 1.08 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2.5, ease: "easeOut" }}
+              width={1080}
+              height={1920}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 lg:hidden" />
           </div>
         </div>
 
         {/* Right — Text */}
-        <div className="w-full lg:w-[46%] flex items-center px-6 sm:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 lg:py-16 bg-background">
-          <div className="w-full max-w-[38rem] mx-auto lg:mx-0">
+        <div className="w-full flex items-start px-6 sm:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 lg:py-0 bg-background">
+          <div className="w-full max-w-[38rem] mx-auto lg:mx-0 lg:pt-14 xl:pt-20">
             <motion.p
               custom={0}
               variants={fadeUp}
