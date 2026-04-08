@@ -35,25 +35,25 @@ const Navbar = () => {
   ];
 
   const headerClassName = scrolled
-    ? "bg-background/82 backdrop-blur-2xl border-b border-divider/80 shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]"
+    ? "bg-[hsl(var(--background)/0.92)] backdrop-blur-2xl border-b border-[hsl(var(--divider)/0.85)] shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]"
     : dark
-      ? "bg-background/45 backdrop-blur-2xl border-b border-divider/40 shadow-[0_10px_30px_hsl(var(--foreground)/0.16)]"
-      : "bg-background/72 backdrop-blur-2xl border-b border-divider/70 shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]";
+      ? "bg-[linear-gradient(to_bottom,hsl(var(--background)/0.78),hsl(var(--background)/0.58))] backdrop-blur-2xl border-b border-[hsl(var(--divider)/0.5)] shadow-[0_10px_30px_hsl(var(--foreground)/0.16)]"
+      : "bg-[linear-gradient(to_bottom,hsl(var(--background)/0.92),hsl(var(--background)/0.82))] backdrop-blur-2xl border-b border-[hsl(var(--divider)/0.8)] shadow-[0_10px_30px_hsl(var(--foreground)/0.08)]";
 
   const navTextClassName = dark && !scrolled
-    ? "text-foreground/88"
+    ? "text-foreground/94"
     : !dark && !scrolled
-      ? "text-foreground drop-shadow-[0_1px_12px_hsl(var(--background)/0.4)]"
+      ? "text-foreground"
       : "text-foreground";
   const navLinkClassName = dark && !scrolled
-    ? "text-foreground/86 hover:text-foreground"
+    ? "text-foreground/92 hover:text-foreground"
     : !dark && !scrolled
-      ? "text-foreground/88 hover:text-foreground drop-shadow-[0_1px_10px_hsl(var(--background)/0.35)]"
+      ? "text-foreground/92 hover:text-foreground"
       : "text-foreground/85 hover:text-foreground";
   const iconClassName = dark && !scrolled
-    ? "text-foreground/82 hover:text-primary"
+    ? "text-foreground/88 hover:text-primary"
     : !dark && !scrolled
-      ? "text-foreground/86 hover:text-primary drop-shadow-[0_1px_10px_hsl(var(--background)/0.35)]"
+      ? "text-foreground/88 hover:text-primary"
       : "text-foreground/80 hover:text-primary";
 
   const languageSwitcher = (
